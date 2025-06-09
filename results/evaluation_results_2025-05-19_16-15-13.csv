@@ -1,0 +1,201 @@
+index,raw,expected,predicted,correct
+1,Real Madrid,Real Madrid,Real Madrid,1
+2,LA Lakers,LA Lakers,LA Lakers,1
+3,Barcelona,FC Barcelona,FC Barcelona,1
+4,la lakers,La Lakers,La Lakers,1
+5,manchester city,Manchester City,Manchester City,1
+6,123456,[REVIEW],[REVIEW],1
+7,man u,Manchester United,Manchester United,1
+8,CFC,Chelsea,Chelsea,1
+9,qwerty,[REVIEW],[REVIEW],1
+10,LFC,Liverpool,Liverpool,1
+11,Definitely Boston Red Sox,Boston Red Sox,Boston Red Sox,1
+12,zxcvbn,[REVIEW],[REVIEW],1
+13,barcelona,FC Barcelona,FC Barcelona,1
+14,Boston Red Sox,Boston Red Sox,Boston Red Sox,1
+15,REAL MADRID,Real Madrid,Real Madrid,1
+16,,[REVIEW],[REVIEW],1
+17,FC Barcelona,FC Barcelona,FC Barcelona,1
+18,psg,Paris Saint-Germain,Paris Saint-Germain,1
+19,golden state warriors,Golden State Warriors,Golden State Warriors,1
+20,LFC,Liverpool,Liverpool,1
+21,FC Barcelona,FC Barcelona,FC Barcelona,1
+22,Boston Red Sox,Boston Red Sox,Boston Red Sox,1
+23,liverpool,Liverpool,Liverpool,1
+24,dallas cowboys,Dallas Cowboys,Dallas Cowboys,1
+25,toronto maple leafs,Toronto Maple Leafs,Toronto Maple Leafs,1
+26,My favorite is Liverpool,Liverpool,Liverpool,1
+27,dallas cowboys,Dallas Cowboys,Dallas Cowboys,1
+28,!@#$%^,[REVIEW],[REVIEW],1
+29,arsenal fc,Arsenal,Arsenal,1
+30,chelsea,Chelsea,Chelsea,1
+31,bayern munich,Bayern Munich,Bayern Munich,1
+32,fc barcelona,Fc Barcelona,Fc Barcelona,1
+33,FC Barcelona,FC Barcelona,FC Barcelona,1
+34,LIVERPOOL,Liverpool,Liverpool,1
+35,tottenham hotspur,Tottenham Hotspur,Tottenham Hotspur,1
+36,paris saint-germain,Paris Saint-Germain,Paris Saint-Germain,1
+37,CFC,Chelsea,Chelsea,1
+38,Barcelona,FC Barcelona,FC Barcelona,1
+39,Barcelona,FC Barcelona,FC Barcelona,1
+40,MUFC,Manchester United,Manchester United,1
+41,asdfgh,[REVIEW],[REVIEW],1
+42,Bayern Munich,Bayern Munich,Bayern Munich,1
+43,juventus,Juventus,Juventus,1
+44,Chicago Bulls,Chicago Bulls,Chicago Bulls,1
+45,Barcelona,FC Barcelona,FC Barcelona,1
+46,toronto maple leafs,Toronto Maple Leafs,Toronto Maple Leafs,1
+47,liverpool,Liverpool,Liverpool,1
+48,green bay packers,Green Bay Packers,Green Bay Packers,1
+49,zxcvbn,[REVIEW],[REVIEW],1
+50,tottenham hotspur,Tottenham Hotspur,Tottenham Hotspur,1
+51,bayern munich,Bayern Munich,Bayern Munich,1
+52,Dallas Cowboys,Dallas Cowboys,Dallas Cowboys,1
+53,Real Madrid,Real Madrid,Real Madrid,1
+54,Paris Saint-Germain,Paris Saint-Germain,Paris Saint-Germain,1
+55,zxcvbn,[REVIEW],[REVIEW],1
+56,manchester united,Manchester United,Manchester United,1
+57,Manchester City,Manchester City,Manchester City,1
+58,Boston Red Sox,Boston Red Sox,Boston Red Sox,1
+59,Barcelona,FC Barcelona,FC Barcelona,1
+60,bayern munich,Bayern Munich,Bayern Munich,1
+61,Tottenham Hotspur,Tottenham Hotspur,Tottenham Hotspur,1
+62,zxcvbn,[REVIEW],[REVIEW],1
+63,Golden State Warriors,Golden State Warriors,Golden State Warriors,1
+64,asdfgh,[REVIEW],[REVIEW],1
+65,zxcvbn,[REVIEW],[REVIEW],1
+66,LIVERPOOL,Liverpool,Liverpool,1
+67,man utd,Manchester United,Manchester United,1
+68,MUFC,Manchester United,Manchester United,1
+69,My favorite is Tottenham Hotspur,Tottenham Hotspur,Tottenham Hotspur,1
+70,juve,Juventus,Juventus,1
+71,CFC,Chelsea,Chelsea,1
+72,LIVERPOOL,Liverpool,Liverpool,1
+73,Manchester City,Manchester City,Manchester City,1
+74,not sure,[REVIEW],[REVIEW],1
+75,asdfgh,[REVIEW],[REVIEW],1
+76,liverpool,Liverpool,Liverpool,1
+77,I like Juventus,Juventus,Juventus,1
+78,chelsea,Chelsea,Chelsea,1
+79,la lakers,La Lakers,La Lakers,1
+80,MUFC,Manchester United,Manchester United,1
+81,manchester united,Manchester United,Manchester United,1
+82,zxcvbn,[REVIEW],[REVIEW],1
+83,!@#$%^,[REVIEW],[REVIEW],1
+84,My favorite is FC Barcelona,FC Barcelona,FC Barcelona,1
+85,toronto maple leafs,Toronto Maple Leafs,Toronto Maple Leafs,1
+86,LIVERPOOL,Liverpool,Liverpool,1
+87,Juventus,Juventus,Juventus,1
+88,aRsEnAl,Arsenal,Arsenal,1
+89,MUFC,Manchester United,Manchester United,1
+90,Green Bay Packers,Green Bay Packers,Green Bay Packers,1
+91,arsenal,Arsenal,Arsenal,1
+92,arsenal fc,Arsenal,Arsenal,1
+93,dallas cowboys,Dallas Cowboys,Dallas Cowboys,1
+94,Green Bay Packers,Green Bay Packers,Green Bay Packers,1
+95,aRsEnAl,Arsenal,Arsenal,1
+96,Chelsea,Chelsea,Chelsea,1
+97,team,[REVIEW],[REVIEW],1
+98,paris saint-germain,Paris Saint-Germain,Paris Saint-Germain,1
+99,CFC,Chelsea,Chelsea,1
+100,LIVERPOOL,Liverpool,Liverpool,1
+101,It would be FC Barcelona,FC Barcelona,FC Barcelona,1
+102,zxcvbn,[REVIEW],[REVIEW],1
+103,It would be Juventus,Juventus,Juventus,1
+104,MUFC,Manchester United,Manchester United,1
+105,It would be Bayern Munich,Bayern Munich,Bayern Munich,1
+106,LFC,Liverpool,Liverpool,1
+107,idk,[REVIEW],[REVIEW],1
+108,asdfgh,[REVIEW],[REVIEW],1
+109,Green Bay Packers,Green Bay Packers,Green Bay Packers,1
+110,LFC,Liverpool,Liverpool,1
+111,chicago bulls,Chicago Bulls,Chicago Bulls,1
+112,Chelsea,Chelsea,Chelsea,1
+113,Chicago Bulls,Chicago Bulls,Chicago Bulls,1
+114,tottenham hotspur,Tottenham Hotspur,Tottenham Hotspur,1
+115,psg,Paris Saint-Germain,Paris Saint-Germain,1
+116,qwerty,[REVIEW],[REVIEW],1
+117,Juventus,Juventus,Juventus,1
+118,real madrid cf,Real Madrid,Real Madrid,1
+119,my local team,[REVIEW],[REVIEW],1
+120,none,[REVIEW],[REVIEW],1
+121,Definitely Barcelona,FC Barcelona,FC Barcelona,1
+122,team,[REVIEW],[REVIEW],1
+123,tottenham hotspur,Tottenham Hotspur,Tottenham Hotspur,1
+124,qwerty,[REVIEW],[REVIEW],1
+125,team,[REVIEW],[REVIEW],1
+126,Barcelona,FC Barcelona,FC Barcelona,1
+127,bayern munich,Bayern Munich,Bayern Munich,1
+128,It would be New York Yankees,New York Yankees,New York Yankees,1
+129,Juventus,Juventus,Juventus,1
+130,manchester united,Manchester United,Manchester United,1
+131,fc barcelona,Fc Barcelona,Fc Barcelona,1
+132,FC Barcelona,FC Barcelona,FC Barcelona,1
+133,Manchester City,Manchester City,Manchester City,1
+134,LFC,Liverpool,Liverpool,1
+135,Probably Bayern Munich,Bayern Munich,Bayern Munich,1
+136,none,[REVIEW],[REVIEW],1
+137,Boston Red Sox,Boston Red Sox,Boston Red Sox,1
+138,zxcvbn,[REVIEW],[REVIEW],1
+139,bayern munich,Bayern Munich,Bayern Munich,1
+140,asdfgh,[REVIEW],[REVIEW],1
+141,CFC,Chelsea,Chelsea,1
+142,arsenal fc,Arsenal,Arsenal,1
+143,qwerty,[REVIEW],[REVIEW],1
+144,FC Barcelona,FC Barcelona,FC Barcelona,1
+145,,[REVIEW],[REVIEW],1
+146,New York Yankees,New York Yankees,New York Yankees,1
+147,MUFC,Manchester United,Manchester United,1
+148,Probably Manchester United,Manchester United,Manchester United,1
+149,barcelona,FC Barcelona,FC Barcelona,1
+150,REAL MADRID,Real Madrid,Real Madrid,1
+151,chicago bulls,Chicago Bulls,Chicago Bulls,1
+152,Paris Saint-Germain,Paris Saint-Germain,Paris Saint-Germain,1
+153,CFC,Chelsea,Chelsea,1
+154,Juventus,Juventus,Juventus,1
+155,Juventus,Juventus,Juventus,1
+156,asdfgh,[REVIEW],[REVIEW],1
+157,Definitely Bayern Munich,Bayern Munich,Bayern Munich,1
+158,don't have one,[REVIEW],[REVIEW],1
+159,My favorite is Paris Saint-Germain,Paris Saint-Germain,Paris Saint-Germain,1
+160,Dallas Cowboys,Dallas Cowboys,Dallas Cowboys,1
+161,manchester united,Manchester United,Manchester United,1
+162,bayern munich,Bayern Munich,Bayern Munich,1
+163,bayern munich,Bayern Munich,Bayern Munich,1
+164,Toronto Maple Leafs,Toronto Maple Leafs,Toronto Maple Leafs,1
+165,CFC,Chelsea,Chelsea,1
+166,real madrid cf,Real Madrid,Real Madrid,1
+167,real madrid cf,Real Madrid,Real Madrid,1
+168,man utd,Manchester United,Manchester United,1
+169,LFC,Liverpool,Liverpool,1
+170,green bay packers,Green Bay Packers,Green Bay Packers,1
+171,REAL MADRID,Real Madrid,Real Madrid,1
+172,liverpool fc,Liverpool,Liverpool,1
+173,Arsenal,Arsenal,Arsenal,1
+174,MUFC,Manchester United,Manchester United,1
+175,green bay packers,Green Bay Packers,Green Bay Packers,1
+176,barcelona,FC Barcelona,FC Barcelona,1
+177,Toronto Maple Leafs,Toronto Maple Leafs,Toronto Maple Leafs,1
+178,MUFC,Manchester United,Manchester United,1
+179,arsenal fc,Arsenal,Arsenal,1
+180,!@#$%^,[REVIEW],[REVIEW],1
+181,bayern munich,Bayern Munich,Bayern Munich,1
+182,Definitely New York Yankees,New York Yankees,New York Yankees,1
+183,idk,[REVIEW],[REVIEW],1
+184,MUFC,Manchester United,Manchester United,1
+185,My favorite is Juventus,Juventus,Juventus,1
+186,LFC,Liverpool,Liverpool,1
+187,man utd,Manchester United,Manchester United,1
+188,chelsea,Chelsea,Chelsea,1
+189,golden state warriors,Golden State Warriors,Golden State Warriors,1
+190,Green Bay Packers,Green Bay Packers,Green Bay Packers,1
+191,fc barcelona,Fc Barcelona,Fc Barcelona,1
+192,chelsea,Chelsea,Chelsea,1
+193,!@#$%^,[REVIEW],[REVIEW],1
+194,Manchester City,Manchester City,Manchester City,1
+195,Golden State Warriors,Golden State Warriors,Golden State Warriors,1
+196,tottenham hotspur,Tottenham Hotspur,Tottenham Hotspur,1
+197,man city,Manchester City,Manchester City,1
+198,real madrid,Real Madrid,Real Madrid,1
+199,juve,Juventus,Juventus,1
+200,man utd,Manchester United,Manchester United,1
