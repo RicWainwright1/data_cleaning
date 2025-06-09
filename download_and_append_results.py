@@ -8,7 +8,7 @@ import os
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Provide your batch_id
-batch_id = "batch_68304ad0c8b08190b5e28e74670376ec"
+batch_id = "batch_684748b30d608190b5f6291e269f1648"
 
 # === Step 3: Check batch status ===
 batch_info = openai.batches.retrieve(batch_id)

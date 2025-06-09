@@ -117,7 +117,7 @@ Downloads completed batch results and merges with original data.
 
 ### Fine-tuning Settings (main.py)
 ```python
-BASE_MODEL = "gpt-3.5-turbo"
+BASE_MODEL = "gpt-4o-mini"
 TRAIN_FILE = "train.jsonl"
 TEST_FILE = "test.jsonl"
 MODEL_SUFFIX = "favourite-sports-cleaners"

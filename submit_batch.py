@@ -6,7 +6,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY") # Replace with your real key
 
 # Upload the JSONL file
 upload_response = openai.files.create(
-    file=open("sports_hobbies_cleaning_batch.jsonl", "rb"),
+    file=open("finetuning/sports_hobbies_cleaning_batch.jsonl", "rb"),
     purpose="batch"
 )
 
