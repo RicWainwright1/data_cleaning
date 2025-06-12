@@ -67,6 +67,7 @@ pip install -r requirements.txt
 3. Set up your OpenAI API key:
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
+```
 
 Environment Variables (.env file)
 
@@ -77,19 +78,27 @@ To run this project securely, you'll need to provide environment-specific settin
 The .env file should use simple KEY=VALUE pairs, one per line:
 
 # Example .env file
+
+```bash
 DB_USER=your_username
 DB_PASSWORD=your_password
 API_KEY=your_api_key_here
 ENV=development
+```
+
 ⚠️ Important: Do not commit your .env file to version control. It's already excluded via .gitignore.
 📋 To get started:
 
 Copy the example file:
 cp .env.example .env
 Fill in your actual values in .env.
+
 If using Python, install python-dotenv to load environment variables automatically:
+```bash
 pip install python-dotenv
+```
 In your Python scripts, load the variables like so:
+```bash
 from dotenv import load_dotenv
 import os
 
