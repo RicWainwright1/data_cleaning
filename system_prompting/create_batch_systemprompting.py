@@ -3,7 +3,7 @@ import json
 import uuid
 
 # Load the input TSV file
-input_file = "sports_hobbies_records_to_clean.txt"
+input_file = "../data/sports_hobbies_records_to_clean.txt"
 df = pd.read_csv(input_file, sep="\t", on_bad_lines='skip', engine="python")
 
 # Define the system prompt
@@ -111,7 +111,7 @@ for _, row in df.iterrows():
         "method": "POST",
         "url": "/v1/chat/completions",
         "body": {
-            "model": "gpt-4.1",
+            "model": "ft:gpt-4.1-nano-2025-04-14:the-insights-family::BgoSZlZP",
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}

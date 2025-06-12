@@ -8,7 +8,7 @@ import os
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Provide your batch_id
-batch_id = "batch_684748b30d608190b5f6291e269f1648"
+batch_id = "batch_684752c7b59881908699f6d9496d29a3"
 
 # === Step 3: Check batch status ===
 batch_info = openai.batches.retrieve(batch_id)
@@ -47,7 +47,7 @@ for i, r in enumerate(responses):
 
 # === Step 7: Load original dataset ===
 try:
-    df = pd.read_csv("sports_hobbies_records_to_clean.txt", sep="\t", engine="python", on_bad_lines="skip")
+    df = pd.read_csv("data/sports_hobbies_records_to_clean.txt", sep="\t", engine="python", on_bad_lines="skip")
 except Exception as e:
     print(f"Failed to read input file: {e}")
     exit()
@@ -64,7 +64,7 @@ elif len(df) < len(cleaned_outputs):
 df["clean_data"] = cleaned_outputs
 
 # === Step 10: Save to output file ===
-output_filename = "sports_hobbies_cleaned_with_predictions.csv"
+output_filename = "results/sports_hobbies_cleaned_with_predictions.csv"
 df.to_csv(output_filename, index=False, encoding="utf-8-sig")
 print(f"[Success] Saved: {output_filename}")
 

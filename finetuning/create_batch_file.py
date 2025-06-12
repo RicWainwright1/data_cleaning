@@ -8,7 +8,7 @@ input_file = "../data/sports_hobbies_records_to_clean.txt"
 df = pd.read_csv(input_file, sep="\t", on_bad_lines='skip', engine="python")
 
 # Model configuration
-model_id = "ft:gpt-4o-mini-2024-07-18:the-insights-family:favourite-sports-cleaners:BYwH5kjs"
+model_id = "ft:gpt-3.5-turbo-0125:the-insights-family:favourite-sports-cleaners:BYwH5kjs"
 
 # Generate batch records
 batch_data = []
