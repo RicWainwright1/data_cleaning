@@ -1,4 +1,4 @@
-# Sports Data Cleaning Project
+# Data Cleaning Project
 
 A machine learning project for cleaning and standardizing open-ended survey responses related to sports teams and leagues using OpenAI's GPT models.
 
