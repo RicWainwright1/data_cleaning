@@ -97,8 +97,21 @@ Copy the example file:
 cp .env.example .env
 Fill in your actual values in .env.
 
+If using Python, install python-dotenv to load environment variables automatically:
+```bash
+pip install python-dotenv
+```
+In your Python scripts, load the variables like so:
+```bash
+from dotenv import load_dotenv
+import os
 
-How to create the conda environment
+load_dotenv()
+db_user = os.getenv("DB_USER")
+```
+
+
+## How to create the conda environment
 
 To create a Conda environment from an environment.yaml file, use the following command in your terminal after cd'ing in to the directory:
 ```bash
@@ -115,27 +128,16 @@ To deactivate it you can use:
 conda deactivate
 ```
 
-If using Python, install python-dotenv to load environment variables automatically:
-```bash
-pip install python-dotenv
-```
-In your Python scripts, load the variables like so:
-```bash
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-db_user = os.getenv("DB_USER")
-```
-
 ## Order to run the data cleaning in:
+
+ALL OF THE FILES ARE IN THE DATA CLEANING REPO!
 
 ## Step 1 - create the finetuned file from the golden dataset
 ```bash
 cd data_cleaning/finetuning
 python create_finetune_file.py
 ```
-this takes in the golden dataset with questions, answers given, the prompt and the expected result. detailed prompt is called data_clean_prompt.py - this needs changing to a dynamic name so we can have multiple for different question types.
+this takes in the golden dataset (which is an excel file in the data folder) with questions, answers given, the prompt and the expected result. detailed prompt is called data_clean_prompt.py - this needs changing to a dynamic name so we can have multiple for different question types.
 
 ## Step 2 - Upload the file to openAI
 ```bash
@@ -155,7 +157,7 @@ Once the model has completed the tuning we can now run a batch of datacleaning. 
 ```bash
 python create_batch_systemprompting.py
 ```
-Similar to before this create the file format that OpenAI needs to run the file. 
+Similar to before this create the file format that OpenAI needs to run the file, you can adjust the model on row 114
 
 ## Step 5 - Submit the batch & kick off the batch job 
 ```bash
