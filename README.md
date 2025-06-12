@@ -15,12 +15,16 @@ This project provides two approaches for cleaning messy sports-related survey da
 │   ├── split_the_data.py              # Split dataset into train/test/validation
 │   ├── train.jsonl                    # Training data (700 samples)
 │   ├── test.jsonl                     # Test data (200 samples)
+│   ├── golden_dataset   
 │   └── validation.jsonl               # Validation data (100 samples)
+
 ├── system_prompting/
 │   ├── create_batch_systemprompting.py    # Generate batch requests with system prompts
 │   └── submit_batch_systemprompthing.py   # Submit batch job to OpenAI
 ├── finetuning/
 │   ├── create_batch.py    # Generate batch requests with system prompts
+│   ├── create_finetune_file.py
+│   ├── create_finetune_job.py    # Generate batch requests with system prompts
 ├── main.py                            # Fine-tuning workflow and evaluation
 ├── submit_batch.py                    # Submit batch processing job
 ├── download_and_append_results.py     # Download and process batch results
@@ -106,92 +110,48 @@ load_dotenv()
 db_user = os.getenv("DB_USER")
 ```
 
-## Usage
+## Order to run the data cleaning in:
 
-### Method 1: Fine-tuned Model Approach
-
-#### 1. Prepare Training Data
+## Step 1 - create the finetuned file from the golden dataset
 ```bash
-python data/split_the_data.py
+cd data_cleaning/finetuning
+python create_finetune_file.py
 ```
-This creates train/test/validation splits from your dataset.
+this takes in the golden dataset with questions, answers given, the prompt and the expected result. detailed prompt is called data_clean_prompt.py - this needs changing to a dynamic name so we can have multiple for different question types.
 
-#### 2. Fine-tune the Model
+## Step 2 - Upload the file to openAI
 ```bash
-python main.py
+python upload_file.py
 ```
-This script will:
-- Upload training data to OpenAI
-- Create a fine-tuning job
-- Monitor training progress
-- Evaluate the model on test data
-- Generate evaluation results CSV
+this takes the file we generated earlier which is a jsonl file and uploads it to openAI - we then get a file ID.
 
-#### 3. Model Evaluation
-The script automatically evaluates the fine-tuned model and saves results to:
-- `evaluation_results_YYYY-MM-DD_HH-MM-SS.csv`
-
-### Method 2: System Prompting with Batch API
-
-#### 1. Prepare Batch Input
+## Step 3 - Create the finetune job
 ```bash
-python system_prompting/create_batch_systemprompting.py
+python create_finetune_job.py
 ```
-This generates `sports_hobbies_cleaning_batch_systemprompt.jsonl` for batch processing.
+create_finetune_job using the fileID we got earlier update line 7 with the ID from before - you can adjust the suffix and metadata to get better information. Logging in with the technology account you can see the following: https://platform.openai.com/finetune/ftjob-nFkJeGTgxhPiDNS6hCE3f6Np?filter=all - you will see the progress of the fine tuned model
 
-#### 2. Submit Batch Job
+Once the model has completed the tuning we can now run a batch of datacleaning. Firstly we need to create the batch...
+
+## Step 4 - Create the batch datacleaning job
 ```bash
-python system_prompting/submit_batch_systemprompthing.py
+python create_batch_systemprompting.py
 ```
-Returns a batch job ID for tracking.
+Similar to before this create the file format that OpenAI needs to run the file. 
 
-#### 3. Download Results
+## Step 5 - Submit the batch & kick off the batch job 
+```bash
+python submit_batch_systemprompting.py
+```
+submit_batch_systemprompting to see the progress go here: https://platform.openai.com/batches/batch_6847f4a15c1c8190bc7194339d14c088 this will give us an ID at the end.
+
+
+Using the ID from the previous step update the batch_id on line 11 - the file sits in the root of the data_cleaning repo. 
+## Step 5 - Submit the batch & kick off the batch job 
 ```bash
 python download_and_append_results.py
 ```
-Downloads completed batch results and merges with original data.
-
-## Configuration
-
-### Fine-tuning Settings (main.py)
-```python
-BASE_MODEL = "gpt-4o-mini"
-TRAIN_FILE = "train.jsonl"
-TEST_FILE = "test.jsonl"
-MODEL_SUFFIX = "favourite-sports-cleaners"
-```
-
-### Batch Processing Settings
-- **Model**: GPT-4.1
-- **Temperature**: 0 (deterministic output)
-- **Completion Window**: 24 hours
-
-## Output Formats
-
-The system returns one of three possible outputs:
-- **Cleaned Name**: Standardized entity name (e.g., "Chelsea FC")
-- **None**: For invalid/ambiguous responses
-- **[REVIEW]**: For questionable entries requiring human review
-
-## Example Transformations
-
-| Input | Output |
-|-------|--------|
-| "I like the Lakers" | "Los Angeles Lakers" |
-| "Barca" | "FC Barcelona" |
-| "Man U" | "Manchester United FC" |
-| "asdfgh" | None |
-| "idk" | None |
-| "★Barcelona★" | "FC Barcelona" |
-
-## File Descriptions
-
-- **`main.py`**: Complete fine-tuning pipeline with evaluation
-- **`split_the_data.py`**: Dataset splitting utility
-- **`submit_batch.py`**: Basic batch job submission
-- **`download_and_append_results.py`**: Batch results processing
-- **`create_batch_systemprompting.py`**: Advanced batch input generation
-- **`submit_batch_systemprompthing.py`**: Enhanced batch submission
+The last step is to review the results and store them in the results folder for review.
 
 ## Monitoring and Evaluation
 
