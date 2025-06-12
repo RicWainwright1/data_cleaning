@@ -58,6 +58,7 @@ git clone <repository-url>
 cd sports-data-cleaning
 ```
 
+These are all setup and handled by the environment variables
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
@@ -66,6 +67,34 @@ pip install -r requirements.txt
 3. Set up your OpenAI API key:
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
+
+Environment Variables (.env file)
+
+To run this project securely, you'll need to provide environment-specific settings (such as API keys, database passwords, etc.) in a .env file located in the project root.
+
+✅ Format of the .env file
+
+The .env file should use simple KEY=VALUE pairs, one per line:
+
+# Example .env file
+DB_USER=your_username
+DB_PASSWORD=your_password
+API_KEY=your_api_key_here
+ENV=development
+⚠️ Important: Do not commit your .env file to version control. It's already excluded via .gitignore.
+📋 To get started:
+
+Copy the example file:
+cp .env.example .env
+Fill in your actual values in .env.
+If using Python, install python-dotenv to load environment variables automatically:
+pip install python-dotenv
+In your Python scripts, load the variables like so:
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+db_user = os.getenv("DB_USER")
 ```
 
 ## Usage
