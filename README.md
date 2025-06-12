@@ -97,6 +97,24 @@ Copy the example file:
 cp .env.example .env
 Fill in your actual values in .env.
 
+
+How to create the conda environment
+
+To create a Conda environment from an environment.yaml file, use the following command in your terminal after cd'ing in to the directory:
+```bash
+conda env create -f environment.yaml
+```
+
+You can then activate the environment using 
+```bash
+conda activate data_cleaning
+```
+
+To deactivate it you can use: 
+```bash
+conda deactivate
+```
+
 If using Python, install python-dotenv to load environment variables automatically:
 ```bash
 pip install python-dotenv
